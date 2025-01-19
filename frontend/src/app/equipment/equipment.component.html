@@ -1,0 +1,27 @@
+<html>
+
+
+<div>
+  <button (click)="back()">Back</button>
+  <button (click)="add()">Add</button>
+  <h2>Equipment</h2>
+</div>
+
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Equipment Type</th>
+        <th>Serial Number</th>
+
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let obj of list">
+        <td>{{ obj.id  }}</td>
+        <td>{{ obj.typeName }}</td>
+        <td>{{ obj.serialNumber  }}</td>
+      </tr>
+    </tbody>
+  </table>
+</html>

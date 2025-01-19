@@ -1,0 +1,20 @@
+
+<div>
+
+    <div>
+        <label for="name">Name:</label>
+        <input type="string"  [(ngModel)]="name" required>
+    </div>
+        <div>
+            <label for="cost">Cost Per Minute:</label>
+        <input type="number" [(ngModel)]="cost" required>
+        </div>
+        <div>
+            <label for="cost">Maintenance cost:</label>
+        <input type="number" [(ngModel)]="maintenance_cost" required>
+        </div>
+
+        <div><button (click) = "add()">Add</button></div>
+</div>
+
+

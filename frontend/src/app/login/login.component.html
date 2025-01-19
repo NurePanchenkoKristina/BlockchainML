@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <div class="login-container">
+            <h2>Login</h2>
+            <div >
+                <input type="text" name="username" placeholder="Username" required #us>
+                <br>
+                <input type="password" name="password" placeholder="Password" required #ps>
+                <br>
+                <button (click)="login(us.value, ps.value)">Login</button>
+                <p>Don't have an account? <a [routerLink]="['/register']">Register here</a>.</p>
+                <div class = "message">{{message}}</div>
+            </div>
+        </div>
+    </body>
+</html>

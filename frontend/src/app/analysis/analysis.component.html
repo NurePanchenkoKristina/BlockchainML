@@ -1,0 +1,22 @@
+<h2 style = "text-align: center;">Machine learning analysis page</h2>
+<div style="display: flex; justify-content: center;">
+  <button (click)= "predictDemand()">Predict Demand</button>
+    <button (click)= "optimizeInventory()">Optimize Inventory</button>
+    <button (click)= "optimizePrice()">Optimize Price</button>
+</div>
+<div>
+    <table>
+        <thead>
+          <tr>
+            <th>Equipment Type</th>
+            <th>Predicted Value</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let obj of list">
+            <td>{{ obj.name  }}</td>
+            <td>{{ obj.value }}</td>
+          </tr>
+        </tbody>
+      </table> 
+</div>

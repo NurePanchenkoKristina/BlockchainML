@@ -1,0 +1,22 @@
+<div>
+    <button (click) = "back()">Back</button>
+    <button (click) = "add()">Add equipment type</button></div>
+
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Type Name</th>
+        <th>Cost Per Minute</th>
+        <th>Maintenance Cost</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let obj of list">
+        <td>{{ obj.id  }}</td>
+        <td>{{ obj.typeName }}</td>
+        <td>{{ obj.costPerMinute  }}</td>
+        <td>{{ obj.maintenanceCost  }}</td> 
+      </tr>
+    </tbody>
+  </table>

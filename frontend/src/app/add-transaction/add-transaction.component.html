@@ -1,0 +1,43 @@
+<style>
+    .center-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .center-div > div {
+        margin-bottom: 10px; 
+    }
+
+    label {
+        margin-right: 10px;
+    }
+</style>
+
+<div class="center-div">
+    <div>
+        <label for="equipment">Equipment:</label>
+        <select [(ngModel)]="selectedEquipment" id="equipment" name="equipment" required>
+          <option *ngFor="let equipment of equipmentList" [value]="equipment.id">{{ equipment.name}}</option>
+        </select>
+      </div>
+    
+      <div>
+        <label for="customer">Customer:</label>
+        <select  [(ngModel)]="selectedCustomer" id="customer" name="customer" required>
+          <option *ngFor="let customer of customerList" [value]="customer.id">{{ customer.name }}</option>
+        </select>
+      </div>    
+   
+    <div>
+        <label for="startTime">Start Time:</label>
+        <input type="datetime-local" id="startTime" name="startTime" [(ngModel)]="startTime" required>
+    </div>
+
+    <div>
+        <label for="endTime">End Time:</label>
+        <input type="datetime-local" id="endTime" name="endTime" [(ngModel)]="endTime" required>
+    </div>
+
+    <button type="button" (click)="saveTransaction()">Save</button>
+</div>

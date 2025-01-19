@@ -1,0 +1,16 @@
+<div class="center-div">
+    <div>
+        <label for="equipment">Equipment Type:</label>
+        <select [(ngModel)]="selectedType" id="equipment" required>
+          <option *ngFor="let equipmentType of equipmentTypeList" [value]="equipmentType.id">{{ equipmentType.name}}</option>
+        </select>
+      </div>
+    
+    
+    <div>
+        <label for="serialNumber">Serial Number:</label>
+        <input type="string" id = "serialNumber" [(ngModel)]="serialNumber" required>
+    </div>
+
+    <button type="button" (click)="save()">Save</button>
+</div>

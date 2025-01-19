@@ -1,0 +1,32 @@
+<html>
+
+
+<div>
+  <div>
+    <button (click)="add()">Add</button>
+    <button (click)="logout()">Logout</button>
+    <h2>Transactions</h2>
+  </div>
+
+</div>
+    
+
+<table>
+    <thead>
+      <tr>
+        <th>Equipment</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Cost</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let obj of list">
+        <td>{{ obj.eqipment  }}</td>
+        <td>{{ obj.startTime  }}</td>
+        <td>{{ obj.endTime }}</td>
+        <td>{{ obj.cost }}</td>
+      </tr>
+    </tbody>
+  </table>
+</html>

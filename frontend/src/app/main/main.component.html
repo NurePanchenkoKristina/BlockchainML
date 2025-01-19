@@ -1,0 +1,41 @@
+<html>
+
+
+<div>
+  <button (click)="add()">Add</button>
+  <button (click)="equipment()">Equipment</button>
+  <button (click)="equipmentTypes()">Equipment Types</button>
+  <button (click)="logout()">Logout</button>
+  <h2>Equipment Transactions</h2>
+</div>
+
+<div>
+  <button (click)="analysis()">Machine Learning Analysis</button>
+
+</div>
+
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Equipment</th>
+        <th>Last Name</th>
+        <th>First Name</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Cost</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let obj of list">
+        <td>{{ obj.id  }}</td>
+        <td>{{ obj.typeName }}</td>
+        <td>{{ obj.lastName  }}</td>
+        <td>{{ obj.firstName  }}</td>
+        <td>{{ obj.startTime  }}</td>
+        <td>{{ obj.endTime }}</td>
+        <td>{{ obj.cost }}</td>
+      </tr>
+    </tbody>
+  </table>
+</html>

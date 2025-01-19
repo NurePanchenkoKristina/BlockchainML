@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <div class="login-container">
+            <h2>Register</h2>
+            <div >
+                <input type="text" name="firstName" placeholder="First Name" required #fn>
+                <br>
+                <input type="text" name="lastName" placeholder="Last Name" required #ln>
+                <br>
+                <input type="text" name="patronymic" placeholder="Patronymic" required #pt>
+                <br>
+                <input type="date" name="birthDate" placeholder="Birth Date" required #bd>
+                <br>
+                <input type="text" name="username" placeholder="Username" required #us>
+                <br>
+                <input type="password" name="password" placeholder="Password" required #ps>
+                <br>
+                <button (click)="register(us.value, ps.value, fn.value, ln.value, pt.value, bd.value)">Register</button>
+                <p>Already have an account? <a [routerLink]="['/login']">Login here</a>.</p>
+            </div>
+        </div>
+    </body>
+</html>
